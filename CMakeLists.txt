@@ -6,11 +6,23 @@ add_executable(
 #        remove remov_item/remove_item.cpp
 #        mid mid/mid.cpp
 #        smallest_array   smallest_array/small_array.cpp
-        circle_martix    # circle_martix/circle_martix.cpp
+        # circle_martix/circle_martix.cpp
         cunion.h
 #        mid/target_plant.cpp
-        remove_node/remove_node.cpp
+        remove_node  #作为编译主函数目录
+#        remove_node/remove_node.cpp
         remove_node/MyLinkedList.cpp
         remove_node/reverse_list.cpp
         remove_node/exchange_node.cpp
+        remove_node/remove_countdown_node.cpp
+#        remove_node/array.cpp
+        remove_node/insect_node.cpp
+        remove_node/circle_node.cpp
+        hash/character_pos.cpp
+        hash/char_varify.cpp
+        hash/longest_public_char.cpp
+        hash/interact_array.cpp
+        hash/two_nums_target.cpp
+        hash/source_msg.cpp
+        hash/three_nums.cpp
 )

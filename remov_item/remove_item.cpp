@@ -1,11 +1,7 @@
 //
 // Created by Rainy-Heights on 2024/3/19.
 //
-#include <iostream>
-#include "stdio.h"
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "../cunion.h"
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {

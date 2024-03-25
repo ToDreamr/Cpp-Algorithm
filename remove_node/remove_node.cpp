@@ -33,15 +33,17 @@ int main(){
     vector<int> v={1,2,6,3,4,5,6};
     for (int i = 0; i < 7; ++i) {
         head->val=v[i];
-        cout<<v[i]<<endl;
+        cout<<v[i]<<" ";
         head->next=new ListNode;
         head=head->next;
     }
+    cout<<endl;
 //    head->initNode(head,8);
     Solution *solution;
     ListNode *res=solution->removeElements(node,6);
     while (res->next!= NULL){
-        cout<<res->val<<endl;
+        cout<<res->val<<" ";
         res=res->next;
     }
+    cout<<endl;
 }
