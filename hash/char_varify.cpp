@@ -40,8 +40,8 @@ public:
 };
 
 
-int main(){
-    Solution *solution;
-    string check="stu stu kku stu stu";
-    cout<<solution->equals(check,0,11,1)<<endl;
-}
+//int main(){
+//    Solution *solution;
+//    string check="stu stu kku stu stu";
+//    cout<<solution->equals(check,0,11,1)<<endl;
+//}

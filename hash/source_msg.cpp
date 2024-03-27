@@ -3,7 +3,6 @@
 //
 
 //赎金信件
-#include "bits.h".
 #include "../cunion.h"
 class Solution {
 public:
@@ -13,8 +12,8 @@ public:
         if (magazine.size()>ransomNote.size()){
             return false;
         }
-        for (int i = 0; i < magazine.size(); ++i) {
-            res[magazine[i]-'a']++;
+        for (char i : magazine) {
+            res[i-'a']++;
         }
         for (int i = 0; i < ransomNote.size(); ++i) {
             if (ransomNote[i]==res[i]){

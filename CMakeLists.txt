@@ -7,7 +7,7 @@ add_executable(
 #        mid mid/mid.cpp
 #        smallest_array   smallest_array/small_array.cpp
         # circle_martix/circle_martix.cpp
-        cunion.h
+        build # 编译最终程序名
 #        mid/target_plant.cpp
         remove_node  #作为编译主函数目录
 #        remove_node/remove_node.cpp
@@ -25,4 +25,6 @@ add_executable(
         hash/two_nums_target.cpp
         hash/source_msg.cpp
         hash/three_nums.cpp
+#        remove_node/rectangle.cpp
+        string/char_test.cpp
 )

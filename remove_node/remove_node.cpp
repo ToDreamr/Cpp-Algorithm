@@ -27,23 +27,23 @@ public:
         return head;//返回头节点即可
     }
 };
-int main(){
-    ListNode *node=new ListNode(0);
-    ListNode *head=node;
-    vector<int> v={1,2,6,3,4,5,6};
-    for (int i = 0; i < 7; ++i) {
-        head->val=v[i];
-        cout<<v[i]<<" ";
-        head->next=new ListNode;
-        head=head->next;
-    }
-    cout<<endl;
-//    head->initNode(head,8);
-    Solution *solution;
-    ListNode *res=solution->removeElements(node,6);
-    while (res->next!= NULL){
-        cout<<res->val<<" ";
-        res=res->next;
-    }
-    cout<<endl;
-}
+//int main(){
+//    ListNode *node=new ListNode(0);
+//    ListNode *head=node;
+//    vector<int> v={1,2,6,3,4,5,6};
+//    for (int i = 0; i < 7; ++i) {
+//        head->val=v[i];
+//        cout<<v[i]<<" ";
+//        head->next=new ListNode;
+//        head=head->next;
+//    }
+//    cout<<endl;
+////    head->initNode(head,8);
+//    Solution *solution;
+//    ListNode *res=solution->removeElements(node,6);
+//    while (res->next!= NULL){
+//        cout<<res->val<<" ";
+//        res=res->next;
+//    }
+//    cout<<endl;
+//}
