@@ -27,4 +27,7 @@ add_executable(
         hash/three_nums.cpp
 #        remove_node/rectangle.cpp
         string/char_test.cpp
+        string/reverse_string.cpp
+        string/replase_nums_numsbers.cpp
+        string/reverse_string_III.cpp
 )
