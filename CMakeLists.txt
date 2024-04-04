@@ -30,4 +30,7 @@ add_executable(
         string/reverse_string.cpp
         string/replase_nums_numsbers.cpp
         string/reverse_string_III.cpp
+        string/string_kmp.cpp
+        stack&queue/MyQueue.cpp
+        remove_node/merge_sorted_node.cpp
 )
