@@ -76,7 +76,8 @@ struct Person {
     }
 };
 
-#endif //CARL_CODE_UNION_H
+#endif
+//CARL_CODE_UNION_H
 //
 // Created by Rainy-Heights on 2024/3/19.
 //
