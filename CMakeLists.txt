@@ -34,8 +34,16 @@ add_executable(
 #        tree/front_travel.cpp
 #        bfs/max_island_surface.cpp
         build # 编译最终程序名
-        remove_node
+        lanqiao_2024
         wangdao/stack.cpp
         wangdao/default.h
-        wangdao/queue.cpp  #作为编译主函数目录
+        wangdao/queue.cpp
+        408-algrithm-real/real_test.cpp
+#        remove_node/left_small_right_big.cpp
+        lanqiao_2024/SolveA.cpp
+#        lanqiao_2024/SolveB.cpp
+        lanqiao_2024/head.h
+        sort/my_sort.h
+        sort/insert_sort.cpp
+        #作为编译主函数目录
 )

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="div1"></div>
+<div id="parent">
+    <div id="son1">ds</div>
+    <div id="son2">ds</div>
+</div>
+</body>
+</html>
+<script>
+    var parent = document.getElementById('parent');
+    parent.addEventListener('click',function (e){
+        var target=e.target||event.srcElement;
+        if (!!target&&target.nodeName.toUpperCase()==='DIV'){
+            console.log(target.innerHTML)
+        }
+    })
+
+    //事件广播，使用dispathEvent
+    var fireEvent = function(element, event){
+        if (document.createEventObject){
+            var mockEvent = document.createEventObject();
+            return element.fireEvent('on' + event, mockEvent)
+        }else{
+            var mockEvent = document.createEvent('HTMLEvents');
+            mockEvent.initEvent(event, true, true);
+            return !element.dispatchEvent(mockEvent);
+        }
+    }
+
+    //vue的事件冒泡修饰符：
+    /*
+    1.prevent:阻止默认事件(常用)
+    2. stop:阻止事件冒泡(常用)
+    3. once:事件只触发一次(常用)
+    4.captrue:使用事件的捕捉模式(不常用)
+    5.self:只有event.target是当前操作的元素时才触发事件(不常用)
+    6.passive:事件的默认行为立即执行，无需等待事件回调执行完毕(不常用)
+    */
+</script>
+<style>
+    div {
+        display: flex;
+        height: 0;
+        width: 0;
+        border: 200px solid transparent ;/**`translate`属性调整元素的中心到页面的中心**/
+        border-radius: 200px;
+    }
+
+    .div1 {
+        border-top-color: tomato;
+    }
+</style>

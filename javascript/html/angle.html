@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div class="angle"></div>
+<hr/>
+<div class="heart"></div>
+</body>
+<style>
+  div{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .angle{
+    background: yellow;
+    border: 200px solid transparent ;
+    width: 0;
+    height: 0;
+    border-bottom-color: tomato;
+    border-left-color: aquamarine;
+    border-right-color: brown;
+  }
+  .rectangle{
+      width: 20%;
+      height: 0;
+      padding-top: 20%;
+      background-color: tomato;
+  }
+  .heart {
+    --c: red;
+    width: 400px;
+    aspect-ratio: 1;
+    background:
+            radial-gradient(at 70% 31%,var(--c) 29%,#0000 30%),
+            radial-gradient(at 30% 31%,var(--c) 29%,#0000 30%),
+            conic-gradient(from -45deg at 50% 84%,var(--c) 90deg,#0000 0)
+            bottom/100% 50% no-repeat;
+  }
+
+</style>
+</html>
