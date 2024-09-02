@@ -6,12 +6,56 @@
 #include <vector>
 #include <unordered_set>//无序哈希表
 //#include "multiset" //底层实现为哈希表，std::set 和std::multiset 的底层实现是红黑树，红黑树是一种平衡二叉搜索树，所以key值是有序的
-//#include <map>
+#include <map>
+#include <stack>
 #include <unordered_map>
 #include <algorithm> //排序函数
 #include <cmath>
 
+#define maxsize 10
 using namespace std;
+
+typedef struct SqlList {
+    int data[maxsize];
+    int length;
+} LinerList;
+
+//队列(顺序队列)
+struct SQueue {
+    int front;
+    int rear;
+    int *data;
+};
+
+//串定义
+typedef struct {
+    char ch[maxsize];
+    int length;
+}SString;
+
+//链式队列
+struct QNode{
+    int data;
+    QNode *next;
+};
+struct NQueue{
+    QNode *front;
+    QNode *rear;
+};
+//void InitSQueue() {
+//    SQueue *Q = (SQueue *) malloc(sizeof(SQueue) * maxsize);
+//    Q->rear = Q->front = 0;
+//    Q->data = nullptr;
+//}
+//bool isFullQueue(SQueue &Q) {
+//    if ((Q.rear + 1) % maxsize == Q.front) return true;
+//    return false;
+//}
+//int InsertElem(SQueue &Q) {
+//    if (isFullQueue(Q)) return 0;
+//    Q.front = (Q.front + 1) % maxsize;
+//    return 1;
+//}
 
 //链表ADT
 struct ListNode {
@@ -42,6 +86,24 @@ struct TreeNode {
     TreeNode *right;
 
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+//N叉树ADT
+class Node {
+public:
+    int val;
+    vector<Node *> children;
+
+    Node() {}
+
+    Node(int _val) {
+        val = _val;
+    }
+
+    Node(int _val, vector<Node *> _children) {
+        val = _val;
+        children = _children;
+    }
 };
 
 class List {
