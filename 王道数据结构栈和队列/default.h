@@ -5,18 +5,31 @@
 #ifndef CARL_CODE_DEFAULT_H
 #define CARL_CODE_DEFAULT_H
 
-#include "iostream"
+#include <iostream>
 #define OK 1
 #define ERROR 0
 #define OVERFLOW -2
-#define ElemType int
+#define ElementType int
 typedef int Status;
 
 using namespace std;
 
 //单链表：
-typedef struct LinkNode {
-    ElemType data; //数据域
-    struct LinkNode *next;//指针域
-} *LNode,LinkNode;
+typedef struct LNode {
+    ElementType data; //数据域
+    LNode *next;//指针域
+
+    explicit LNode(int x) : data(x),next(nullptr){};
+} LNode,*LinkList;
+
+//树
+typedef struct Tree{
+    ElementType data;
+    Tree *left;
+    Tree *right;
+
+    explicit Tree(int x) : data(x),left(nullptr),right(nullptr){};
+}*TNode;
+
+
 #endif //CARL_CODE_DEFAULT_H

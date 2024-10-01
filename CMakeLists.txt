@@ -6,13 +6,10 @@ add_executable(
         build # 编译最终程序名
         cunion.h
         tree
-        wangdao/stack.cpp
-        wangdao/default.h
-        wangdao/queue.cpp
-        sort/my_sort.h
-        sort/insert_sort.cpp
+        Algorithm/sort/my_sort.h
+        Algorithm/sort/insert_sort.cpp
         #作为编译主函数目录
         tree/tree_travel.cpp
-        vector_map/arrow.cpp
-        #        linux/cptxt.c
+        Cpp_Test/arrow.cpp
+        Cpp_Test/Person.cpp
 )

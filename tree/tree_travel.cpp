@@ -101,29 +101,29 @@ public:
         vector<int> resTree = preorderTraversal(root);
         return resTree;
     }
+
     //递归遍历办法，以中序遍历为例  左中右
-    vector<int> travelMidSalWithStack(TreeNode *root){
-        TreeNode *cur=root;
+    vector<int> travelMidSalWithStack(TreeNode *root) {
+        TreeNode *cur = root;
         stack<TreeNode *> tempStack;//容器栈
         vector<int> result;//按序存储结果
-        while (cur||!tempStack.empty()){
-            if (cur!=NULL){
+        while (cur || !tempStack.empty()) {
+            if (cur != NULL) {
                 tempStack.push(cur);
-                cur=cur->left;//遍历左边
-            }
-            else{
-                cur=tempStack.top();
+                cur = cur->left;//遍历左边
+            } else {
+                cur = tempStack.top();
                 tempStack.pop();
                 result.push_back(cur->val);
-                cur=cur->right;
+                cur = cur->right;
             }
         }
         return result;
     }
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+
+    vector<vector<string>> groupAnagrams(vector<string> &strs) {
         vector<vector<string>> res;
-        if(strs.size()<=1)
-        {
+        if (strs.size() <= 1) {
             res.push_back(strs);
             return res;
         }
@@ -131,31 +131,31 @@ public:
          * 输入: strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
            输出: [["bat"],["nat","tan"],["ate","eat","tea"]]
          */
-        unordered_map<string ,vector<int>> characterMap;//eat-[32,26,34] tea -[26,32,34]
+        unordered_map<string, vector<int>> characterMap;//eat-[32,26,34] tea -[26,32,34]
         for (int i = 0; i < strs.size(); ++i) {
-            string word=strs[i];
+            string word = strs[i];
             vector<int> characterIndex;
             for (int j = 0; j < word.size(); ++j) {
                 characterIndex.push_back(word[i]);
             }
-            characterMap.insert(pair<string ,vector<int>>(word,characterIndex));
+            characterMap.insert(pair<string, vector<int>>(word, characterIndex));
         }
-        int left=0;
-        int right=characterMap.size();
+        int left = 0;
+        int right = characterMap.size();
 
         vector<string> mid;
-        for (int i = left; i < right-1; ++i) {
-            vector<int> leftIndex=characterMap.at(strs[left]);
-            vector<int> rightIndex=characterMap.at(strs[left+1]);
-            sort(leftIndex.begin(),leftIndex.end());
-            sort(rightIndex.begin(),rightIndex.end());
-            if (leftIndex.size()!=rightIndex.size())continue;
-            else{
-                int cnt=0;
-                while (cnt<leftIndex.size()){
-                    if (leftIndex[cnt]!=rightIndex[cnt])break;
+        for (int i = left; i < right - 1; ++i) {
+            vector<int> leftIndex = characterMap.at(strs[left]);
+            vector<int> rightIndex = characterMap.at(strs[left + 1]);
+            sort(leftIndex.begin(), leftIndex.end());
+            sort(rightIndex.begin(), rightIndex.end());
+            if (leftIndex.size() != rightIndex.size())continue;
+            else {
+                int cnt = 0;
+                while (cnt < leftIndex.size()) {
+                    if (leftIndex[cnt] != rightIndex[cnt])break;
                 }
-                res.push_back({strs[left],strs[left+1]});
+                res.push_back({strs[left], strs[left + 1]});
             }
         }
         return res;
