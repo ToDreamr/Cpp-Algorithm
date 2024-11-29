@@ -1,13 +1,12 @@
 //
 // Created by 春江花朝秋月夜 on 2024/4/15.
 //
-#include <sstream>
 #include "my_sort.h"
-#include "../../cunion.h"
 
 //直接插入排序
 class direct_insert {
 public:
+    //插入排序是两次次循环O(n^2)
     static void insert_sort(vector<int> nums) {
         int i, j = 0;
         for (i = 2; i <= nums.size(); ++i)

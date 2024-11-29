@@ -34,6 +34,7 @@ public:
     }
 };
 
+
 int main(){
     vector<vector<string>> doubleVector;//二维向量组
     map<string,int> indexMap;//下标Map
@@ -45,7 +46,7 @@ int main(){
     doubleVector[indexMap.find("eat")->second].emplace_back("XuLiWei");
 
     vector<string > chars = doubleVector[0];
-    for(string s:chars){
+    for(const string& s:chars){
         cout<<s<<" ";
     }
 }

@@ -4,6 +4,7 @@
 //LIFO
 #include "default.h"
 #define MaxSize 10
+#define ElemType int
 
 typedef struct {
     ElemType data[MaxSize];

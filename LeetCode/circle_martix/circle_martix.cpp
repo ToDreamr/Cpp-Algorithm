@@ -26,16 +26,6 @@ public:
                 for (int row = bottom; row > top; --row) {
                     matrix[row][left] = num;
                     num++;
-                }
-            }
-            left++;
-            right--;
-            top++;
-            bottom--;
-        }
-        return matrix;
-    }
-};
 
 int main() {
     Solution *solution;

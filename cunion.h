@@ -31,7 +31,7 @@ typedef struct SqlList {
 struct SQueue {
     int front;
     int rear;
-    ElementType *data;
+    ElementType data;
 };
 
 /**
@@ -86,6 +86,13 @@ struct TreeNode {
     TreeNode *right;
 
     explicit TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
+
+//线索二叉树
+typedef struct ThreadTreeNode{
+    ElementType val;
+    struct ThreadTreeNode *leftChild,*rightChild;
+    int leftTag,rightTag;
 };
 
 //N叉树ADT

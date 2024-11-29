@@ -1,9 +1,6 @@
-//
-// Created by 春江花朝秋月夜 on 2024/4/9.
-//
 #include "default.h"
 #define MaxSize 100
-
+#define ElemType int
 typedef struct {
     ElemType data[MaxSize];
     int front;//指向队头元素
@@ -19,7 +16,7 @@ void InitQueue(SqQueue &Q){
     Q.front=Q.rear=Q.size=0;
 }
 
-bool QueueEmpty(SqQueue Q){
+bool QueueEmpty(SqQueue &Q){
     //如果没有size变量，将会牺牲一个元素空间
     if (Q.rear==Q.front){
         return true;
@@ -50,6 +47,12 @@ ElemType GetTop(SqQueue &Q){
     return false;
 }
 
+typedef struct LinkNode
+{
+    ElementType data;
+    LinkNode *next;
+};
+
 //队列的链式存储：
 typedef struct {
     LinkNode *front,*rear;//队列的队头和队尾指针
@@ -68,7 +71,7 @@ void InitQueue(LinkQueue &Q){
     Q.front=Q.rear=NULL;
 }
 void EnQueue(LinkQueue &Q,ElemType e){
-    LNode s=new LinkNode;
+    LinkNode *s=new LinkNode;
     s->data=e;
     s->next=NULL;
     Q.rear->next=s;
@@ -78,7 +81,7 @@ bool Dequeue(LinkQueue &Q,ElemType &tmp){
     if (isEmpty(Q)){
         return false;
     }
-    LNode s=Q.front->next;
+    LinkNode *s=Q.front->next;
     tmp=s->data;
     Q.front->next=s->next;
     if (Q.rear==s){
