@@ -1,7 +1,7 @@
 <h1 align="center">卡尔-王道数据结构与算法</h1>
-<a href="https://www.yelp.com">
+<a href="https://github.com/ToDreamr/Cpp-Algorithm">
   <div align="center">
-    <br><img align="center" src="https://zh.wikipedia.org/wiki/File:ISO_C%2B%2B_Logo.svg" width='300'/>
+    <br><img align="center" src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_cpp_icon_130670.png" width='300'/>
   </div><br>
 </a>
 
