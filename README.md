@@ -1,7 +1,7 @@
 <h1 align="center">卡尔-王道数据结构与算法</h1>
 <a href="https://github.com/ToDreamr/Cpp-Algorithm">
   <div align="center">
-    <br><img align="center" src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_cpp_icon_130670.png" width='300'/>
+    <br><img align="center" src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_cpp_icon_130670.png" width='200'/>
   </div><br>
 </a>
 
@@ -36,9 +36,9 @@ $$
 
 $$
 中缀表达式 : a+b-c   a+b-c*d
-\\
+
 逆波兰表达式 : ab + c - 或 a bc- +     ab+ cd * -
-\\
+
 波兰表达式 : - + ab c     + ab *-cd
 $$
 

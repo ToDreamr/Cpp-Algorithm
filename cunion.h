@@ -89,7 +89,7 @@ struct TreeNode {
 };
 
 //线索二叉树
-typedef struct ThreadTreeNode{
+struct ThreadTreeNode{
     ElementType val;
     struct ThreadTreeNode *leftChild,*rightChild;
     int leftTag,rightTag;

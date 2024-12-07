@@ -35,18 +35,18 @@ public:
 };
 
 
-int main(){
-    vector<vector<string>> doubleVector;//二维向量组
-    map<string,int> indexMap;//下标Map
-    pair<int,int> pairs;//数对
-    indexMap.insert({"eat",0});
-    doubleVector.push_back({"eat","ate","school"});
-    doubleVector.push_back({"be","a","tough","man"});
-
-    doubleVector[indexMap.find("eat")->second].emplace_back("XuLiWei");
-
-    vector<string > chars = doubleVector[0];
-    for(const string& s:chars){
-        cout<<s<<" ";
-    }
-}
+//int main(){
+//    vector<vector<string>> doubleVector;//二维向量组
+//    map<string,int> indexMap;//下标Map
+//    pair<int,int> pairs;//数对
+//    indexMap.insert({"eat",0});
+//    doubleVector.push_back({"eat","ate","school"});
+//    doubleVector.push_back({"be","a","tough","man"});
+//
+//    doubleVector[indexMap.find("eat")->second].emplace_back("XuLiWei");
+//
+//    vector<string > chars = doubleVector[0];
+//    for(const string& s:chars){
+//        cout<<s<<" ";
+//    }
+//}

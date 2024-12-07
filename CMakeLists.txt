@@ -12,5 +12,6 @@ add_executable(
         tree/tree_travel.cpp
         Cpp_Test/arrow.cpp
         Cpp_Test/Person.cpp
-        王道数据结构栈和队列/question.cpp
+        DataStructure/Graph/graph.c
+        DataStructure/Graph/graph.h
 )

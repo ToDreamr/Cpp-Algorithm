@@ -163,11 +163,44 @@ public:
         return res;
     }
 };
+// 计算n的阶乘
+int func(int n) {
+    int res = 1;
+    while (n > 1) {
+        res *= n;
+        n--;
+    }
+    return res;
+}
+
+// 计算e^x的近似值
+long double fun(int n) {
+    long double res = 1;
+    double curTerm = 1;  // 当前项的值
+    int curPow = 1;
+    while (true) {
+        // 计算当前项，通过循环计算n的curPow次方，避免使用pow函数
+        long double xPower = 1;
+        for (int i = 0; i < curPow; i++) {
+            xPower *= n;
+        }
+        curTerm = xPower * 1.0 / func(curPow);
+        res += curTerm;
+        if (curTerm < 1e-120) {
+            break;
+        }
+        curPow++;
+    }
+    return res;
+}
 
 //int main() {
-//    Tree *tree;
-//    vector<int> res = tree->createTree(3);
-//    for (int item: res) {
-//        cout << item << " ";
-//    }
+////    Tree *tree;
+////    vector<int> res = tree->createTree(3);
+////    for (int item: res) {
+////        cout << item << " ";
+////    }
+//    int x = 10;
+//    int y = (2*8,8*9,2*7);
+//    cout<<x<<" "<<y<<" "<<fun(1)<<endl;
 //}
