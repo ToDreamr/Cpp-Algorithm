@@ -102,27 +102,27 @@ void dfs(NodeGraph graph, int startVertex, int targetVertex, int * visited) {
     }
 }
 
-int main() {
-    Graph graph = create();
-    for (int c = 'A'; c <= 'D'; ++c)
-        addVertex(graph, (char) c);
-    addEdge(graph, 0, 1);   //A -> B
-    addEdge(graph, 1, 2);   //B -> C
-    addEdge(graph, 2, 3);   //C -> D
-    addEdge(graph, 3, 0);   //D -> A
-    addEdge(graph, 2, 0);   //C -> A
-
-
-    NodeGraph nodeGraph = createNodeGraph();
-    for (int c = 'A'; c <= 'D'; ++c)
-        addNodeVertex(nodeGraph, (char) c);
-    addNodeEdge(nodeGraph, 0, 1);   //A -> B
-    addNodeEdge(nodeGraph, 1, 2);   //B -> C
-    addNodeEdge(nodeGraph, 2, 3);   //C -> D
-    addNodeEdge(nodeGraph, 3, 0);   //D -> A
-    addNodeEdge(nodeGraph, 2, 0);   //C -> A
-
-    printGraph(graph);
-
-    printNodeGraph(nodeGraph);
-}
+//int main() {
+//    Graph graph = create();
+//    for (int c = 'A'; c <= 'D'; ++c)
+//        addVertex(graph, (char) c);
+//    addEdge(graph, 0, 1);   //A -> B
+//    addEdge(graph, 1, 2);   //B -> C
+//    addEdge(graph, 2, 3);   //C -> D
+//    addEdge(graph, 3, 0);   //D -> A
+//    addEdge(graph, 2, 0);   //C -> A
+//
+//
+//    NodeGraph nodeGraph = createNodeGraph();
+//    for (int c = 'A'; c <= 'D'; ++c)
+//        addNodeVertex(nodeGraph, (char) c);
+//    addNodeEdge(nodeGraph, 0, 1);   //A -> B
+//    addNodeEdge(nodeGraph, 1, 2);   //B -> C
+//    addNodeEdge(nodeGraph, 2, 3);   //C -> D
+//    addNodeEdge(nodeGraph, 3, 0);   //D -> A
+//    addNodeEdge(nodeGraph, 2, 0);   //C -> A
+//
+//    printGraph(graph);
+//
+//    printNodeGraph(nodeGraph);
+//}

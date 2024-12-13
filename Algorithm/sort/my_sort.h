@@ -11,6 +11,7 @@ using namespace std;
 #define MAXSIZE 20
 typedef int KeyType;
 typedef int InfoType;
+typedef int ElemType;
 typedef struct RedType{
     KeyType  key;//关键字的值
     InfoType otherInfo;//其他信息
